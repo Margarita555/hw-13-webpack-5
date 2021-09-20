@@ -21,12 +21,12 @@ import refs from '../js/refs';
 const { searchForm, imagesContainer, searchBtn, loadMoreBtn, spinner, loadSpan } = refs;
 import NewsApiService from "./apiService";
 import imageCardsTemplate from "../templates/templ.handlebars";
-// import * as basicLightbox from 'basiclightbox';
-// import { alert, error, notice, defaultModules } from '@pnotify/core/dist/PNotify.js';
-// import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js';
-// import '@pnotify/core/dist/PNotify.css';
-// import '@pnotify/core/dist/BrightTheme.css';
-// defaultModules.set(PNotifyMobile, {});
+import * as basicLightbox from 'basiclightbox';
+import { alert, error, notice, defaultModules } from '@pnotify/core/dist/PNotify.js';
+import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js';
+import '@pnotify/core/dist/PNotify.css';
+import '@pnotify/core/dist/BrightTheme.css';
+defaultModules.set(PNotifyMobile, {});
 
 
 const API_KEY = '23351611-7864196d6829752dad19e3759';
@@ -78,13 +78,15 @@ function onImagesContainerClick(e) {
     }
     console.log(e.target)
     const imgUrl = e.target.getAttribute('src');
-
+    console.log(imgUrl)
     const lightbox = basicLightbox.create(`
-   <div class="lightbox"><img src="${imgUrl}"></img>
+   <div class="lightbox"><img src="${imgUrl}"/>
    </div> 
-`
-)
+    `   
+    )
+        
     lightbox.show();
+    console.log(document.querySelector('.basicLightbox'))
 // lightbox.close()
  }
 
