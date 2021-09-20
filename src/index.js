@@ -3,21 +3,36 @@
 // ----------------------------------------------------------------------------
 
 import './css/styles.scss'
-import './images/sprite.svg'
-import db from './db/db.json'
-import templ from './templates/templ.handlebars'
-import refs from './js/refs'
+// import css from "file.css";
 import './js/func'
-import './js/listeners'
-import './js/createItemsByTemplate'
-// именованый импорт
-import { hello1, hello2 } from './js/func'
-// hello1()
-// hello2()
+import refs from './js/refs'
+const { searchForm, imagesContainer, searchBtn, loadMoreBtn, spinner, loadSpan } = refs;
+import imageCardsTemplate from './templates/templ.handlebars'
+import NewsApiService from "./js/apiService";
 
-// дефолтный импорт
-import data from './js/func'
-// console.log('data', data)
-const { obj: myObj, arr: myArr } = data
-// console.log(myObj)
-// console.log(myArr)
+
+
+// import './images/sprite.svg'
+// import db from './db/db.json'
+
+
+// import './js/listeners'
+// import './js/createItemsByTemplate'
+// // именованый импорт
+// import { hello1, hello2 } from './js/func'
+
+// // дефолтный импорт
+// import data from './js/func'
+
+// const { obj: myObj, arr: myArr } = data
+
+
+
+
+
+// import * as basicLightbox from 'basiclightbox';
+// import { alert, error, notice, defaultModules } from '@pnotify/core/dist/PNotify.js';
+// import * as PNotifyMobile from '@pnotify/mobile/dist/PNotifyMobile.js';
+// import '@pnotify/core/dist/PNotify.css';
+// import '@pnotify/core/dist/BrightTheme.css';
+// defaultModules.set(PNotifyMobile, {});
